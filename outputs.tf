@@ -1,5 +1,5 @@
 output "vpc_id" {
-  value = module.aws_vpc.vpc_id
+  value = module.aws_vpc.main.id
 }
 
 output "public_subnet_list" {
@@ -7,7 +7,7 @@ output "public_subnet_list" {
 }
 
 output "igw_id" {
-  value = module.aws_vpc.igws_id
+  value = module.aws_internet_gateway.igw.id
 }
 
 
