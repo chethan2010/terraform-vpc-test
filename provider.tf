@@ -2,16 +2,15 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.60.0"
+      version = "6.45.0"
     }
   }
-  backend"s3"{
-    bucket="dev-daw9"
-     key= "expense-vpc-p/terraform.tfstate" 
-    region="us-east-1"
-    dynamodb_table="daws83s"
- 
-}
+ backend "s3" {
+    bucket         = "dev-daw9-hemanth-2026"
+    key            = "exp-dev-vpc/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "daws83s"
+  }
 }
 provider "aws" {
  region="us-east-1"
